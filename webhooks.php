@@ -45,13 +45,13 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			echo "userID = " . $result . "\r\n";
 			
-			$idPush = $result;
-			$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-			$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-			$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
-			$response = $bot->pushMessage($idPush, $textMessageBuilder);
+			//$idPush = $result;
+			//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+			//$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+			//$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+			//$response = $bot->pushMessage($idPush, $textMessageBuilder);
 
-			echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+			//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 		}
 	}
 }
